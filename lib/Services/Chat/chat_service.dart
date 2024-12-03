@@ -6,6 +6,7 @@ class ChatService {
   //get instance of firestore and auth
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final Timestamp timestamp = Timestamp.now();
   //get user stream
 
   /*
@@ -46,8 +47,8 @@ class ChatService {
 
     //create a new message
     Message newMessage = Message(
-      senderID: currentUserID,
-      senderEmail: currentUserEmail,
+      senderID: currentUserEmail,
+      senderEmail: currentUserID,
       receiverID: receiverID,
       message: message,
       timestamp: timestamp,
@@ -56,7 +57,7 @@ class ChatService {
     //construct chat room ID for the two users (shorted to ensure uniqueness)
     List<String> ids = [currentUserID, receiverID];
     ids.sort(); //sort the ids (this insures the ChatroomID is the same for 2 people)
-    String ChatroomID = ids.join('');
+    String ChatroomID = ids.join('_');
 
     //add new message to database
     await _firestore
@@ -67,7 +68,7 @@ class ChatService {
   }
 
   //get message
-  Stream<QuerySnapshot> getMessages(String userID, String otherUserID) {
+  Stream<QuerySnapshot> getMessages(String userID, otherUserID) {
     // Construct a chat room ID for the two users
     List<String> ids = [userID, otherUserID];
     ids.sort();
