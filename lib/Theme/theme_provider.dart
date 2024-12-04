@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gighire/Theme/LigntMode.dart';
+import 'package:gighire/Theme/light_mode.dart';
 import 'package:gighire/Theme/dark_mode.dart';
 
 class ThemeProvider extends ChangeNotifier {
