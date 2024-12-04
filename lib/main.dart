@@ -37,16 +37,18 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:gighire/Services/Auth/Login_and_Register.dart';
 import 'package:gighire/Services/Auth/auth_gate.dart';
-import 'package:gighire/Chat%20UI/home_page.dart';
-import 'package:gighire/Theme/LigntMode.dart';
+import 'package:gighire/Theme/theme_provider.dart';
 import 'package:gighire/firebase_options.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => ThemeProvider(),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -58,7 +60,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const AuthGate(),
       // home: HomePage(),
-      theme: lightmode,
+      theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }
