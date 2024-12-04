@@ -45,6 +45,11 @@ class _ChatPageState extends State<ChatPage> {
         );
       }
     });
+    //wait a bit for listview to built, then scroll to button
+    Future.delayed(
+      const Duration(milliseconds: 500),
+      () => scrollDown(),
+    );
   }
 
   @override
