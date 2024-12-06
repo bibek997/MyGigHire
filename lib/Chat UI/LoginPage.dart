@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gighire/Services/Auth/auth_service.dart';
 import 'package:gighire/Components/Button.dart';
-import 'package:gighire/Components/Textfield.dart';
+import 'package:gighire/Components/text_field.dart';
 
 class Loginpage extends StatelessWidget {
   //email and pw controllers
