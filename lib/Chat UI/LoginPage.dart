@@ -44,22 +44,22 @@ class Loginpage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Logo
-            Icon(
-              Icons.message,
-              size: 60,
-              color: Theme.of(context).colorScheme.primary,
+            // Logo and Tagline
+            const SizedBox(height: 5),
+            const Text(
+              'GigHire',
+              style: TextStyle(
+                color: Color(0xFF4CAF50),
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+              ),
             ),
 
-            const SizedBox(height: 50),
+            const SizedBox(height: 25),
 
-            // Welcome back message
-            Text(
-              "Welcome back",
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.primary,
-                fontSize: 16,
-              ),
+            const Text(
+              'Welcome Back',
+              style: TextStyle(color: Color(0xFF888888), fontSize: 16),
             ),
 
             const SizedBox(height: 25),
