@@ -25,9 +25,15 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
-        return windows;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -41,48 +47,28 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA-hU5_Zy-O4rG-ZFyLZpzpojO4nkq7T1Y',
-    appId: '1:311805614389:web:bea2d43348e331b2d3947c',
-    messagingSenderId: '311805614389',
-    projectId: 'gighirefirebaseauth',
-    authDomain: 'gighirefirebaseauth.firebaseapp.com',
-    storageBucket: 'gighirefirebaseauth.firebasestorage.app',
-    measurementId: 'G-5VTHKD2XD0',
+    apiKey: 'AIzaSyC27JBuUExatcNCcaY8J3BjLnQWOpYeh6I',
+    appId: '1:310676478091:web:3b7a41a14b9a0befe6dc8e',
+    messagingSenderId: '310676478091',
+    projectId: 'mygighirechat',
+    authDomain: 'mygighirechat.firebaseapp.com',
+    storageBucket: 'mygighirechat.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyByRu3Yi6B66sMaEoY8b_8fVHEy8c9eCyY',
-    appId: '1:311805614389:android:260fb5993e239972d3947c',
-    messagingSenderId: '311805614389',
-    projectId: 'gighirefirebaseauth',
-    storageBucket: 'gighirefirebaseauth.firebasestorage.app',
+    apiKey: 'AIzaSyC-X-DvXi1eUdiAzd_SlPZgA69LsvZySQs',
+    appId: '1:310676478091:android:8b807668c51c0dd2e6dc8e',
+    messagingSenderId: '310676478091',
+    projectId: 'mygighirechat',
+    storageBucket: 'mygighirechat.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDExzO3Ipzsvt9CLhuNv-x6ioEk7XGKLhQ',
-    appId: '1:311805614389:ios:6421fbd82da685c5d3947c',
-    messagingSenderId: '311805614389',
-    projectId: 'gighirefirebaseauth',
-    storageBucket: 'gighirefirebaseauth.firebasestorage.app',
+    apiKey: 'AIzaSyBkNM-hAjhAWt7GUZeXqKaU1uBS-TXKrXQ',
+    appId: '1:310676478091:ios:35fcb58a7f2956d7e6dc8e',
+    messagingSenderId: '310676478091',
+    projectId: 'mygighirechat',
+    storageBucket: 'mygighirechat.firebasestorage.app',
     iosBundleId: 'com.example.gighire',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDExzO3Ipzsvt9CLhuNv-x6ioEk7XGKLhQ',
-    appId: '1:311805614389:ios:6421fbd82da685c5d3947c',
-    messagingSenderId: '311805614389',
-    projectId: 'gighirefirebaseauth',
-    storageBucket: 'gighirefirebaseauth.firebasestorage.app',
-    iosBundleId: 'com.example.gighire',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyA-hU5_Zy-O4rG-ZFyLZpzpojO4nkq7T1Y',
-    appId: '1:311805614389:web:297f9c86a0384615d3947c',
-    messagingSenderId: '311805614389',
-    projectId: 'gighirefirebaseauth',
-    authDomain: 'gighirefirebaseauth.firebaseapp.com',
-    storageBucket: 'gighirefirebaseauth.firebasestorage.app',
-    measurementId: 'G-J4Z70EX6DW',
   );
 }
